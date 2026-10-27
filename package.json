@@ -1,0 +1,25 @@
+{
+  "name": "youtube-to-blog-synthesis-platform",
+  "version": "1.0.0",
+  "description": "Unified YouTube-to-Blog Autonomous Synthesis Engine combining React UI, Express Backend, and LangGraph Multi-Agent AI",
+  "scripts": {
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev:backend": "npm --prefix backend run server",
+    "dev:ai": "python -m uvicorn ai_agent.api.app:app --host 0.0.0.0 --port 8000 --reload",
+    "dev:ai-ui": "streamlit run ai_agent/ui/app.py",
+    "build:frontend": "npm --prefix frontend run build",
+    "db:start": "docker compose up -d mongodb",
+    "db:stop": "docker compose down"
+  },
+  "keywords": [
+    "langgraph",
+    "youtube-to-blog",
+    "ai-agents",
+    "react",
+    "express",
+    "fastapi",
+    "mongodb"
+  ],
+  "author": "",
+  "license": "MIT"
+}

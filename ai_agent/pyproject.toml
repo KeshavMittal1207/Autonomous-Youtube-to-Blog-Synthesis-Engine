@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "youtube-blog-agent"
+version = "1.0.0"
+description = "Autonomous Agentic AI Workflow for converting YouTube Videos into SEO Blog Posts using LangGraph & Groq LLMs."
+authors = [{ name = "AI Agent Engineer" }]
+dependencies = [
+    "langgraph",
+    "langchain",
+    "langchain-groq",
+    "youtube-transcript-api",
+    "requests",
+    "fastapi",
+    "uvicorn",
+    "streamlit",
+    "python-dotenv",
+    "pydantic",
+    "pydantic-settings"
+]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q"
+testpaths = ["tests"]
+pythonpath = ["."]
